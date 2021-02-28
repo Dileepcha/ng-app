@@ -1,0 +1,12 @@
+<nav class="navbar app-nav">
+  <a href="" class="navbar-brand">Todo</a>
+</nav>
+<div class="main-content">
+  <div class="list-wrapper">
+    <ul class="list" *ngFor="let item of listItem">
+      <li class="list-item">{{item}}</li>
+    </ul>
+    <input type="text" class="form-control" [(ngModel)]="item">
+    <button class="btn btn-primary mt-1" (click)="addItem()">Add</button>
+  </div>
+</div>

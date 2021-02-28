@@ -1,0 +1,22 @@
+.app-nav {
+  height: 64px;
+  background-color: #000000;
+}
+
+.list-wrapper {
+  padding: 10px;
+  width: 300px;
+}
+
+.list {
+  list-style: none;
+  padding: 0px;
+}
+
+.list-item {
+  height: 30px;
+  background-color: #376288;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
