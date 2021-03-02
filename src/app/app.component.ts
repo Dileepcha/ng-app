@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
-
+import { AppService} from "./app.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  serverData:any[]
   listItem:any[];
   item:any;
   price:any;
   data:any[];
-  constructor() {
+  constructor(private appService:AppService) {
     this.listItem = [];
     this.data = ['USA', 'CANADA', "EU", "AUS"];
+
+
+    this.appService.getProfile().subscribe(profile => {
+      this.serverData = profile.data;
+        console.log(profile);
+    })
+
+
   }
 
   addItem() {
@@ -26,5 +35,11 @@ export class AppComponent {
 
   delete(index) {
     this.listItem.splice(index, 1);
+  }
+
+  getData(event) {
+    this.listItem.push(event);
+    
+
   }
 }
