@@ -1,5 +1,13 @@
 <nav class="navbar app-nav">
   <a href="" class="navbar-brand">Todo</a>
+  <ul class="navbar-nav flex-row mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/users">Users</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"routerLink="/profile">Profile</a>
+    </li>
+  </ul>
 </nav>
 <div class="main-content">
   <!-- <div class="list-wrapper">
@@ -24,7 +32,7 @@
     <button class="btn btn-primary mt-1" (click)="addItem()">Add</button>
   </div> -->
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-4" *ngFor="let profile of serverData">
     <div class="card">
       <img class="card-img-top" [src]="profile.avatar" alt="Card image cap">
@@ -34,8 +42,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 </div>
 
 
 <!-- <app-info [value]="data" (shareData)="getData($event)"></app-info> -->
+
+<router-outlet></router-outlet>
